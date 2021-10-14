@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>ใบงานที่ 7 ข้อ 1</title>
+ </head>
+ <body>
+	<script type="text/javascript">
+		var ans = confirm("คุณต้องการคำนวณดอกเบี้ยเงินฝากหรือไม่");
+		if(ans==true){
+			var balancetext = prompt("ใส่ยอดเงิน");  //รับข้อมูลที่ผู้ใช้ใส่เข้ามาเป็น String Type 
+			var balance = Number(balancetext);  //แปลง String Type ที่ผู้ใช้ใส่เข้ามาให้เป็น Int Type เพื่อให้คำนวณได้
+			var percent = prompt("ใส่ดอกเบี้ย % ต่อปี");
+			interest=balance*percent/100;
+
+			iyear = prompt("ใส่จำนวนปีที่จะฝาก");
+			calculate(balance, interest, iyear);
+			function calculate(balance, interest, iyear) {
+				year=1;
+				while (year<=iyear)	//iyear กำหนดจำนวนปี
+				{
+					balance+=interest;
+					document.write("Balance year " + year + " = " + balance + " baht");
+					document.write("<br>");
+					year++; //year=year+1
+				}
+			}
+		}
+		else{alert("คุณไม่ต้องการคำนวณดอกเบี้ยเงินฝาก");}
+	</script>
+ </body>
+</html>

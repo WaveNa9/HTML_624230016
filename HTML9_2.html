@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>ใบงานที่ 6 ข้อ 2</title>
+ </head>
+ <body>
+  <script type="text/javascript">
+    var ans = confirm("คุณต้องการเช็ควันหรือไม่");
+	if(ans==true){
+		var numtext = prompt("ใส่เลขของวัน (1-7)"); //รับข้อมูลที่ผู้ใช้ใส่เข้ามาเป็น String Type 
+		var number = Number(numtext);  //แปลง String Type ที่ผู้ใช้ใส่เข้ามาให้เป็น Int Type เพื่อให้ case ทำงานได้
+		day(number);
+		function day(number) {
+			switch (number)
+			{
+				case 1:{
+						document.write("Monday");
+						break;
+					}
+				case 2:{
+						document.write("Tuesday");
+						break;
+					}
+				case 3:{
+						document.write("Wendesday");
+						break;
+					}
+				case 4:{
+						document.write("Thursday");
+						break;
+					}
+				case 5:{
+						document.write("Friday");
+						break;
+					}
+				case 6:{
+						document.write("Saturday");
+						break;
+					}
+				case 7:{
+						document.write("Sunday");
+						break;
+					}
+				default : {
+							document.write("<h1>เกิดข้อผิดพลาด</h>");
+						}
+			}
+			document.write("<br>");
+		}
+	}
+	else{alert("คุณไม่ต้องการเช็ควัน");}
+  </script>
+ </body>
+</html>
